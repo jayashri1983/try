@@ -8,3 +8,8 @@ def run_ping(user_input):
 if __name__ == "__main__":
     user_input = input("Enter IP address or hostname: ")
     run_ping(user_input)
+import subprocess
+
+def run_command():
+    user_input = input("Enter command: ")
+    subprocess.call(user_input, shell=True)  # 🚨 vulnerable
